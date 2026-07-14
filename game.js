@@ -52,8 +52,8 @@
     const span = W - margin * 2;
     for (let i = 0; i < TREE_COUNT; i++) {
       const x = margin + (span / (TREE_COUNT - 1)) * i;
-      const height = 150 + ((i * 37) % 40);
-      const canopyR = 58 + ((i * 13) % 18);
+      const height = 280 + ((i * 37) % 50);
+      const canopyR = 62 + ((i * 13) % 18);
       trees.push({
         x,
         baseY: GROUND_Y,

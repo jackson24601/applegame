@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apple Catcher</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Nunito:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="sky" aria-hidden="true"></div>
+
+    <main class="app">
+      <header class="brand">
+        <h1 class="brand__title">Apple Catcher</h1>
+        <p class="brand__tag">Catch the falling fruit before it hits the ground</p>
+      </header>
+
+      <section class="stage" aria-label="Game stage">
+        <div class="hud" id="hud" hidden>
+          <div class="hud__item">
+            <span class="hud__label">Level</span>
+            <span class="hud__value" id="levelValue">1</span>
+          </div>
+          <div class="hud__item">
+            <span class="hud__label">Caught</span>
+            <span class="hud__value" id="caughtValue">0</span>
+            <span class="hud__suffix">/ 10</span>
+          </div>
+          <div class="hud__item">
+            <span class="hud__label">Misses</span>
+            <span class="hud__value hud__value--miss" id="missValue">0</span>
+            <span class="hud__suffix">/ 3</span>
+          </div>
+        </div>
+
+        <canvas id="game" width="960" height="540" aria-label="Apple Catcher game canvas"></canvas>
+
+        <div class="overlay" id="overlay">
+          <div class="panel" id="panel">
+            <h2 class="panel__title" id="panelTitle">Ready to pick?</h2>
+            <p class="panel__body" id="panelBody">
+              Move with the left and right arrow keys. Catch ten apples to clear a
+              level. Miss three and you drop back a level. Each level drops more
+              apples, faster.
+            </p>
+            <button type="button" class="btn" id="startBtn">Start Harvest</button>
+          </div>
+        </div>
+
+        <p class="hint" id="hint">Use ← → arrow keys to move</p>
+      </section>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
